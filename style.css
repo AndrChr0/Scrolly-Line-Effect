@@ -1,6 +1,11 @@
-body {
-    height: 200vh;
+*, *::after, *::before {
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 300vh;
+    font-family: sans-serif;
 }
 
 .line-cont {
@@ -16,6 +21,78 @@ svg {
     display: inline-block;
     height: 100%;
     width: 100%;
-    scale: 1.1;
+    /* scale: 1; */
+    margin-top: -121px;
+    z-index: -1;
+}
+
+header {
+    height: 100dvh;
+    
+}
+
+header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+nav {
+    background-color: aliceblue;
+    position: relative;
+    bottom: 70px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    
+}
+
+nav ul li {
+    margin: 0 70px;
+    list-style: none;
+    font-weight: 550;
+}
+
+.main-heading {
+    font-size: 4rem;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 40dvh;
+    color: white;
+}
+
+
+.sec-one {
+    width: 40%;
+    height: 300px;
+    position: absolute;
+    top: 110dvh;
+    margin-left: 2rem;
+    opacity: 0;
+    
+}
+
+.two {
+    top: 160dvh;
+    left: 50dvw;
+}
+
+.show {
+    animation: appear 2s linear normal forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
     
 }
