@@ -9,3 +9,24 @@ window.addEventListener('scroll', () => {
             let drawLength = pathLength * scrollPercentage;
             path.style.strokeDashoffset = pathLength - drawLength;
 })
+
+
+
+const sceneOne = document.querySelectorAll(".sec-one");
+
+const options = {};
+
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+        observer.unobserve(entry.target)
+    }
+    entry.target.classList.toggle("show");
+  });
+}, options);
+
+sceneOne.forEach((section) => {
+  observer.observe(section);
+});
